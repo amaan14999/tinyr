@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tinyr</title>
+  </head>
+  <body>
+    <div class="header">Create Short URL</div>
+    <div class="form">
+      <div class="form-element">
+        <label for="longurl">Enter Link</label>
+        <input type="text" id="longurl" placeholder="https://site.com" />
+      </div>
+
+      <div class="form-element">
+        <button id="create-short-url">Create Short URL</button>
+      </div>
+
+      <div class="result">
+        <a href="#" id="short-url" target="_blank"></a>
+      </div>
+    </div>
+    <div class="list">
+      <h2>Shorten Links</h2>
+      <table id="list_urls">
+        <thead>
+          <tr>
+            <th>Long URL</th>
+            <th>Short URL</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- dummy data. Actual data to be pushed from sql -->
+          <!-- <tr>
+            <td>https://google.com</td>
+            <td>https://localhost:5000/jfdig</td>
+            <td>545</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
