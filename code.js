@@ -22,6 +22,9 @@ con.connect(function (error) {
 app.get("/", function (request, response) {
   response.sendFile(__dirname + "/public/index.html");
 });
+app.get("/favicon.ico", function (request, response) {
+  response.sendFile(__dirname + "/public/index.html");
+});
 
 app.post("/api/create-short-url", function (request, response) {
   let uniqueID = Math.random()
@@ -61,6 +64,7 @@ app.get("/api/get-all-short-urls", function (request, response) {
 app.get("/:shorturlid", function (request, response) {
   let shorturlid = request.params.shorturlid;
   let sql = `SELECT * FROM links WHERE shorturlid='${shorturlid}' LIMIT 1`;
+  console.log(shorturlid);
   con.query(sql, function (error, result) {
     if (error) {
       response.status(500).json({
