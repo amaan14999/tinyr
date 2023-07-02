@@ -78,19 +78,30 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new
 FLUSH PRIVILEGES;
 ```
 
-4. Start the application:
+4. Edit the database credentials in the `code.js` file:
+
+```js
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "unlockmysql",
+  database: "shorturls",
+});
+```
+
+5. Start the application:
 
 ```bash
 node code.js
 ```
 
-5. Open the application in your browser:
+6. Open the application in your browser:
 
 ```bash
 http://localhost:5000
 ```
 
-6. Enjoy!
+7. Enjoy!
 
 ## Technologies Used
 
