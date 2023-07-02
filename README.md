@@ -70,7 +70,7 @@ CREATE TABLE links (
 4 rows in set (0.00 sec)
 ```
 
-- Grant privileges to the root user:
+- Grant privileges to the root user and set a password by replacing `your_new_password` with your desired password:
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new_password';
