@@ -44,11 +44,11 @@ Enter password: <your_password>
 - Create the database and table:
 
 ```sql
-CREATE DATABASE shorturls;
+mysql> CREATE DATABASE shorturls;
 
-USE shorturls;
+mysql> USE shorturls;
 
-CREATE TABLE links (
+mysql> CREATE TABLE links (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     longurl VARCHAR(255),
     shorturlid VARCHAR(255),
@@ -73,9 +73,9 @@ CREATE TABLE links (
 - Grant privileges to the root user:
 
 ```sql
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new_password';
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new_password';
 
-FLUSH PRIVILEGES;
+mysql> FLUSH PRIVILEGES;
 ```
 
 4. Edit the database credentials in the `code.js` file:
